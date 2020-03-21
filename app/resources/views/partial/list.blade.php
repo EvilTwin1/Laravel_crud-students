@@ -54,7 +54,7 @@
             <div class="card-header"></div>
             @if($relatedStudent->image == null)
                 <div class="img_wrapp" style="overflow: hidden; border-radius: 50%; width: 100px; height: 100px; margin: 10px auto">
-                    <img width="100%" height="100%" src="https://via.placeholder.com/400x400?text={{ __('message.student') }}+{{$student->id}}" alt="">
+                    <img width="100%" height="100%" src="https://via.placeholder.com/400x400?text={{ __('message.student') }}+{{$relatedStudent->id}}" alt="">
                 </div>
             @else
                 <div class="img_wrapp" style="overflow: hidden; border-radius: 50%; width: 100px; height: 100px; margin: 10px auto">
