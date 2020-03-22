@@ -2,6 +2,7 @@
 
 return [
     'students_not_found' => 'Student not found',
+    'students_search_not_found' => 'Student :student not found',
     'popular_students_not_found' => 'No popular students',
     'most_popular' => 'Most viewed student',
 

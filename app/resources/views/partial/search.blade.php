@@ -37,7 +37,7 @@
             </tbody>
         </table>
     @else
-        <p style="text-align: center">{{ __('message.students_not_found') }}</p>
+        <p style="text-align: center">{{ __('message.students_search_not_found', ['student'=>"$search"]) }}</p>
     @endif
     {{$students->links()}}
 

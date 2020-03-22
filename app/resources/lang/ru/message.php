@@ -3,6 +3,7 @@
 
 return [
     'students_not_found' => 'Список студентов пуст',
+    'students_search_not_found' => 'Студент :student не найден',
     'popular_students_not_found' => 'Список популярных студентов пуст',
     'most_popular' => 'Популярный студент',
 

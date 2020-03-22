@@ -13,7 +13,7 @@ class StudentController extends Controller
     public function index()
     {
         $students =  Student::orderBy('id','desc')->paginate(5);
-        $relatedStudents = Student::limit(3)->orderBy('view_count','desc')->get();
+        $relatedStudents = Student::limit(3)->orderBy('view_count','desc')->where('view_count', '>', 4)->get();
         return view('partial.list', ['students'=> $students,'relatedStudents'=>$relatedStudents]);
     }
 
@@ -119,6 +119,6 @@ class StudentController extends Controller
         ]);
         $search = $request->get('search');
         $students = Student::where('name', 'like', '%' . $search . '%')->paginate(5);
-        return view('partial.search', compact('students'));
+        return view('partial.search', ['students'=>$students, 'search'=>$search]);
     }
 }
