@@ -9,4 +9,18 @@ class Student extends Model
 {
     use SoftDeletes;
     protected $fillable = ['name','email','phone','course','image','_token'];
+
+
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] = ucfirst($value);
+    }
+
+
+    public function setCourseAttribute($value)
+    {
+        $this->attributes['course'] = implode(" ", $value);
+    }
+
 }
+

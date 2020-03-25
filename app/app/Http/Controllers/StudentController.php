@@ -52,7 +52,7 @@ class StudentController extends Controller
         $student->email = $request->input('email');
         $student->phone = $request->input('phone');
         $student->_token = $request->input('_token');
-        $student->course = implode(" ", $request->input('course'));
+        $student->course = $request->input('course');
 
         if($request->hasFile('image')){
             $file = $request->file('image');
