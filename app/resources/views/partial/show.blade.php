@@ -18,6 +18,7 @@
             <li class="list-group-item">{{ __('message.email') }}: {{$currentStudent->email}}</li>
             <li class="list-group-item">{{ __('message.phone') }}: {{$currentStudent->phone}}</li>
             <li class="list-group-item">{{ __('message.course') }}: {{$currentStudent->course}}</li>
+            <li class="list-group-item">Status: <span class="{{ ($currentStudent->check != null) ? 'no_student' : 'status' }}">Is studying</span></li>
         </ul>
         <div class="card-body"></div>
         <div class="card-footer text-muted">

@@ -84,6 +84,7 @@ class StudentController extends Controller
         $student->phone = $request->input('phone');
         $student->_token = $request->input('_token');
         $student->course = $request->input('course');
+        $student->check = $request->input('check');
 
         if($request->hasFile('image')){
             unlink(public_path('uploads/students/' . $student->image));

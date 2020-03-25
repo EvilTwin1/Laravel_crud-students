@@ -44,7 +44,9 @@
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
             </div>
-
+            <div class="form-group">
+                <p style="margin-left: 20px;"><input type="checkbox" name="check" value="no_student" @if($currentStudent->check == 'no_student') checked @endif>course completed</p>
+            </div>
             <div class="form-group">
                 <label for="exampleInputFile">{{ __('message.form_file') }}</label>
                 <input type="file" name="image" class="form-control-file" >
