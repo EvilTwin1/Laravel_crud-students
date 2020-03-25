@@ -13,9 +13,8 @@ class Student extends Model
 
     public function setNameAttribute($value)
     {
-        $this->attributes['name'] = ucfirst($value);
+        $this->attributes['name'] = ucwords($value);
     }
-
 
     public function setCourseAttribute($value)
     {
