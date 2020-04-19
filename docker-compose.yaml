@@ -30,7 +30,7 @@ services:
     ports:
       - "3306:3306"
     environment:
-      - MYSQL_DATABASE=sandbox
+      - MYSQL_DATABASE=laravel_crud_students
       - MYSQL_ROOT_PASSWORD=secret
     networks:
       - app

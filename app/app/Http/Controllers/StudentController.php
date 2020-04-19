@@ -86,14 +86,17 @@ class StudentController extends Controller
         $student->course = $request->input('course');
         $student->check = $request->input('check');
 
-        if($request->hasFile('image')){
-            unlink(public_path('uploads/students/' . $student->image));
+        if($request->hasFile('image')) {
+            if ($student->image != null){
+                unlink(public_path('uploads/students/' . $student->image));
+            }
+
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extension;
             $file->move('uploads/students', $filename);
 
-            $student->image =$filename;
+            $student->image = $filename;
         }
 
         $student->save();
