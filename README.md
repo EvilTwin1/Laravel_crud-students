@@ -20,4 +20,4 @@
 
 # Пощупать руками
 
-  http://cryptic-hamlet-59233.herokuapp.com/
+  https://blog-sml.herokuapp.com/
