@@ -20,4 +20,4 @@
 
 # Пощупать руками
 
-  https://blog-sml.herokuapp.com/
+  https://students-lms.herokuapp.com/
